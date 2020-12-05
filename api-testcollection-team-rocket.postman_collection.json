@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "f11ed3e9-40e5-44b8-bac1-2f6610350119",
+		"name": "api-testcollection-team-rocket",
+		"description": "This collection will contain all the routes of the dubbadub api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.dubbadub.be/api/students",
+					"protocol": "http",
+					"host": [
+						"api",
+						"dubbadub",
+						"be"
+					],
+					"path": [
+						"api",
+						"students"
+					]
+				},
+				"description": "Get all students from the database"
+			},
+			"response": []
+		},
+		{
+			"name": "/students/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.dubbadub.be/api/students/5fcb5eb8360c8b0012c16a0d",
+					"protocol": "http",
+					"host": [
+						"api",
+						"dubbadub",
+						"be"
+					],
+					"path": [
+						"api",
+						"students",
+						"5fcb5eb8360c8b0012c16a0d"
+					]
+				},
+				"description": "Finds Student by ID"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "2TINDEVOPS",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "key",
+				"type": "string"
+			}
+		]
+	},
+	"protocolProfileBehavior": {}
+}

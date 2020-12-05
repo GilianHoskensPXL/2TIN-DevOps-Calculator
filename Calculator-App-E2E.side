@@ -1,0 +1,96 @@
+{
+  "id": "c7faad33-bd93-443a-ac1b-b657cf3f4ec1",
+  "version": "2.0",
+  "name": "Calculator-App-E2E",
+  "url": "http://localhost",
+  "tests": [{
+    "id": "0ca6daba-0977-438b-abcb-4dfd4962b390",
+    "name": "AppCanAdd",
+    "commands": [{
+      "id": "ff9dc8c8-b863-48f9-b3fe-2bbcde0ca764",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2751e666-b8cc-4afc-b2b2-a6e2a1564170",
+      "comment": "",
+      "command": "type",
+      "target": "id=number1",
+      "targets": [],
+      "value": "5"
+    }, {
+      "id": "054623cd-7c62-48f5-a661-17a96cd601d7",
+      "comment": "",
+      "command": "type",
+      "target": "id=number2",
+      "targets": [
+        ["id=number2", "id"],
+        ["name=number2", "name"],
+        ["css=#number2", "css:finder"],
+        ["xpath=//input[@id='number2']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "4"
+    }, {
+      "id": "7ed4b079-2b49-441a-b86c-71903b043c50",
+      "comment": "",
+      "command": "click",
+      "target": "name=add",
+      "targets": [
+        ["name=add", "name"],
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@name='add']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e690248f-9ed2-4e14-b7e3-2b40c6c49441",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//h2[contains(.,'The result of adding 5 and 4 is 9')]",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'The result of adding 5 and 4 is 9')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3fcf0680-8eec-4be8-8e25-221a23315663",
+    "name": "AppHasButton",
+    "commands": [{
+      "id": "2e45714d-917a-45bb-ad86-df60551947cf",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8503ea3-28ac-4749-83ae-c037f697b470",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@name='add']",
+      "targets": [
+        ["name=add", "name"],
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@name='add']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "b94f293a-b567-406b-8424-5a6ec56eb42a",
+    "name": "Calculator Test Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3fcf0680-8eec-4be8-8e25-221a23315663", "0ca6daba-0977-438b-abcb-4dfd4962b390"]
+  }],
+  "urls": ["http://localhost/"],
+  "plugins": []
+}
